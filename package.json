@@ -1,0 +1,20 @@
+
+{
+  "name": "react-native-video-cover",
+  "version": "1.1.4",
+  "description": "Get cover image form video",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "ZhuDongwei",
+  "license": "ISC",
+  "peerDependencies": {
+    "react-native": "^0.29.0",
+    "react-native-windows": "^0.29.0"
+
+  }
+}

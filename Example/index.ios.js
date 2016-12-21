@@ -59,9 +59,9 @@ export default class Example extends Component {
                 //     })
                 //  });
                 RNVideoCover.getVideoCover(response.uri).then(result => {
-                        console.log("result is ", result);
+                        console.log("result is "+result.thumbnail+"   "+result.duration);
                         this.setState({
-                            videoSource:result,
+                            videoSource:result.thumbnail,
                         })
                     }
                 ).catch(error => {

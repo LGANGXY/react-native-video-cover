@@ -46,8 +46,15 @@ RCT_REMAP_METHOD(getVideoCover,
         [UIImagePNGRepresentation(image) writeToFile:imagePath atomically:YES];
         CGImageRelease(cgImage);
         
-        NSLog(@"视频截取成功  -- %@",imagePath);
-        resolve(imagePath);
+        float second = 0;
+        second = urlSet.duration.value/urlSet.duration.timescale;
+        NSNumber *num = [NSNumber numberWithFloat:second];
+        
+        NSLog(@"视频截取成功  -- %@  --长度-%f",imagePath,second);
+        NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+        [dict setObject:num forKey:@"duration"];
+        [dict setObject:imagePath forKey:@"thumbnail"];
+        resolve(dict);
     }
 }
 
@@ -75,6 +82,4 @@ RCT_REMAP_METHOD(getVideoCover,
 
 
 @end
-
-
 

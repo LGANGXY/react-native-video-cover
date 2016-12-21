@@ -58,7 +58,7 @@ export default class Example extends Component {
                 //      console.log("nativeClass: ", name);
                 //     })
                 //  });
-                RNVideoCover.getVideoCover(response.uri).then(result => {
+                RNVideoCover.getVideoInfo(response.uri).then(result => {
                         console.log("result is "+result.thumbnail+"   "+result.duration);
                         this.setState({
                             videoSource:result.thumbnail,

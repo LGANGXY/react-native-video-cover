@@ -17,7 +17,7 @@ RCT_EXPORT_MODULE(RNVideoCover)
 
 
 //Promise
-RCT_REMAP_METHOD(getVideoCover,
+RCT_REMAP_METHOD(getVideoInfo,
                  path:(NSString *)path
                  resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject) {
